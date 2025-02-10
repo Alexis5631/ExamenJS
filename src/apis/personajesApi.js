@@ -43,7 +43,7 @@ const patchPersonaje = async (datos, id) => {
 
 const deletePersonaje = async (id) => {
     try {
-        return await fetch(`${URL_API}/personaje/${id}`, { // Corregido "/circuitos/" → "/personaje/"
+        return await fetch(`${URL_API}/personaje/${id}`, { 
             method: "DELETE",
             headers: myHeaders,
         });

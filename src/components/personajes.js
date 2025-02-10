@@ -11,18 +11,132 @@ export class Personajes extends HTMLElement {
     render() {
         this.shadowRoot.innerHTML = /*html*/ `
         <style>
-            .card {
-                border: 1px solid #ddd;
-                border-radius: 8px;
-                padding: 16px;
-                margin: 10px;
-                text-align: center;
-                background-color: #f9f9f9;
-                box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+            body {
+                font-family: Arial, sans-serif;
+                background-color: #f0f4f8;
+                margin: 0;
+                padding: 0;
             }
-            img {
-                max-width: 100px;
+            
+            h1 {
+                text-align: center;
+                color: #333;
+                padding-top: 20px;
+                font-size: 2rem;
+            }
+
+            .form-container {
+                display: flex;
+                justify-content: center;
+                padding: 20px;
+                background-color: #ffffff;
+                margin: 20px auto;
                 border-radius: 8px;
+                box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+                max-width: 600px;
+                width: 100%;
+            }
+
+            form {
+                width: 100%;
+            }
+
+            .mb-3 {
+                margin-bottom: 15px;
+            }
+
+            .form-label {
+                font-size: 1rem;
+                color: #333;
+            }
+
+            .form-control {
+                width: 100%;
+                padding: 8px;
+                font-size: 1rem;
+                border-radius: 4px;
+                border: 1px solid #ddd;
+                margin-top: 5px;
+            }
+
+            .form-select {
+                width: 100%;
+                padding: 8px;
+                font-size: 1rem;
+                border-radius: 4px;
+                border: 1px solid #ddd;
+                margin-top: 5px;
+            }
+
+            .btn {
+                padding: 10px 20px;
+                font-size: 1rem;
+                background-color: #007bff;
+                color: white;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+                margin-top: 15px;
+                width: 100%;
+                transition: background-color 0.3s ease;
+            }
+
+            .btn:hover {
+                background-color: #0056b3;
+            }
+
+            .lista-personajes {
+                display: grid;
+                grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+                gap: 20px;
+                padding: 20px;
+                justify-items: center;
+                margin-top: 30px;
+            }
+
+            .card {
+                background-color: #ffffff;
+                border-radius: 12px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                padding: 15px;
+                text-align: center;
+                transition: transform 0.3s ease, box-shadow 0.3s ease;
+                width: 100%;
+                max-width: 300px;
+            }
+
+            .card:hover {
+                transform: translateY(-10px);
+                box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+            }
+
+            .card img {
+                width: 100%;
+                border-radius: 8px;
+                object-fit: cover;
+                height: 180px;
+                margin-bottom: 15px;
+            }
+
+            .card h3 {
+                font-size: 1.3rem;
+                color: #333;
+                margin-bottom: 10px;
+            }
+
+            .card p {
+                font-size: 1rem;
+                color: #555;
+            }
+
+            .card .casa {
+                font-weight: bold;
+                color: #007bff;
+            }
+
+            .card .poderes {
+                font-style: italic;
+                color: #888;
             }
         </style>
     <form id="formPersonajes">
@@ -55,7 +169,9 @@ export class Personajes extends HTMLElement {
 <div id="listaPersonajes"></div>
 `;
         
-        this.shadowRoot.querySelector('#formPersonajes').addEventListener('submit', this.crearPersonaje);
+        this.shadowRoot.querySelector('#formPersonajes').addEventListener('submit', () => {
+            this.crearPersonaje();
+        });
     }
 
     async crearPersonaje(event) {
