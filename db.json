@@ -1,0 +1,35 @@
+{
+    "personajes": [
+        {
+            "id": 1,
+            "nombreReal": "Bruce Wayne",
+            "nombreHeroe": "Batman",
+            "casa": "DC",
+            "año": 1939,
+            "origen": "Gotham City",
+            "poderes": ["Intelecto superior", "Habilidad en combate", "Uso de tecnologia avanzada"],
+            "habilidades": ["Detective experto", "Inteligencia", "Fuerza fisica"],
+            "historiaComics": "Debuto en detective comicos #27 en 1939. creado por Bob Kae y Bill Finger.",
+            "biografia": "Batman es la identidad secreta de Bruce Wayne, un empresario multimillonario, galán y filántropo.",
+            "aparicionesCine": ["Batman (1989)", "El caballero oscuro (2008)", "The Batman (2022)"],
+            "imagen": "https://www.shutterstock.com/image-vector/batman-design-logo-sign-icon-600nw-2317334183.jpg"
+        },
+    
+        {
+            "id": 2,
+            "nombreReal": "Peter Parker",
+            "nombreHeroe": "Spider-Man",
+            "casa": "MARVEL",
+            "año": 1962,
+            "origen": "Peter es mordido por una araña radioactiva y se convierte en Spider-Man",
+            "poderes": ["Fuerza", "Velocidad", "Agilidad"],
+            "habilidades": ["Resistencia", "Durabilidad"],
+            "historiaComics": "Debuto en comic Amazing Fantasy #15 el 10 de agosto de 1962",
+            "biografia": "Spider-Man es un superhéroe de Marvel Comics creado por Stan Lee y Steve Ditko. Su verdadera identidad es Peter Parker, un joven estudiante de secundaria que fue mordido por una araña radioactiva. ",
+            "aparicionesCine": ["Spider-Man 1, 2, 3", "The amazing Spider-Man ", "Spider-Man: (Homecoming, Lejos de casa, No Way Home)"],
+            "imagen": "https://upload.wikimedia.org/wikipedia/commons/5/52/Spider-Man.jpg"
+        }
+    
+    ]
+
+}
